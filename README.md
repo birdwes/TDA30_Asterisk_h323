@@ -7,7 +7,9 @@ How To guide for interfacing Asterisk SIP server to Panasonic KX-TDA30 with KX-T
 
 ## Contents (incomplete)
 
-[1/726L Telephone](./726L/README.md)
+[Dial plan](./content/DialPlan.md)
+
+[Trunk Groups](./content/Trunk_Groups.md)
 
 ## Essential terminology
 
