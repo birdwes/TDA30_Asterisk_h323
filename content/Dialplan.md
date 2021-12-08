@@ -79,7 +79,7 @@ Own PBX code should be left blank.
 
 
 
-[Trunk Groups](Trunk_Groups.md)
+[Automatic Route Selection](ARS.md)
 
 [Home](README.md)
 

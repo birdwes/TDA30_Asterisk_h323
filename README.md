@@ -9,7 +9,7 @@ How To guide for interfacing Asterisk SIP server to Panasonic KX-TDA30 with KX-T
 
 [Dial plan](./content/Dialplan.md)
 
-[Trunk Groups](./content/Trunk_Groups.md)
+[Automatic Route Selection](./content/ARS.md) - Required for external Asterisk routing with the IPGW4 card.
 
 ## Essential terminology
 
