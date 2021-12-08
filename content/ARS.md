@@ -6,7 +6,7 @@ This causes an issue if the IPGW4 is intended to be also used as a CO line.  To 
 
 Ofcom provides the [national-numbering-plan](https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf) and [national numbering data](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbering-data).  IDA (indirect access) carrier access numbers are in the range 124-140, 143-146, 148-149, 160-169 and 181 to 189.
 
-To avoid any conflict with an existing service code, should the call mistakenly escape to the PSTN via another CO line, we have chosen a range which is currently unallocated: 18930 to 18959.
+To avoid any conflict with an existing service code, should the call mistakenly escape to the PSTN via another CO line, we have chosen a range which is currently unused: 18930 to 18959.
 
 ## ARS on Asterisk
 
@@ -16,12 +16,12 @@ Within the Asterisk dialing context we place the line:
 
 This could also be used to provide access to multiple SIP providers, e.g. by using 18931, 18932...
 
-[globals]
-LOCAL_STD=01632
+`[globals]`
+`LOCAL_STD=01632`
 
 
 
-This accepts dialled numbers prefixed with 18930, strips the first five digits, and redirects them to the context sip_uk_transparent.  This context behaves as if it is on the local PSTN, i.e. numbers in the range 2 to 8 are prefixed with the local area code.
+This accepts dialled numbers prefixed with 18930, strips the first five digits, and redirects them to the context `sip_uk_transparent`.  This context behaves as if it is on the local PSTN, i.e. numbers in the range 2 to 8 are prefixed with the local area code.
 
 ### Exceptions
 The national numbering plan prohibits local number dialling, without a code in the following regions.
@@ -41,15 +41,26 @@ The national numbering plan prohibits local number dialling, without a code in t
 
 Set up the Carriers.  8.5 Carrier
 
-C-PSTN,,,0,,,,,,,,,C-SIP-ATA,,,0,,,,,,,,,SIP-Internal,,,0,,,,,,,,,SIP-Transparent,,,0,,,CH,,,18930,,, 
+![](images/TDA30_Carrier.png)
+
 
 Select the TRG1-6 tab and choose the correct carrier for each trunk group.  Apply.
 
+![](images/TDA30_TrunkCarrier.png)
+
 Set up the leading numbers.  8.2 Leading Number
+
+![](images/TDA30_TrunkLeadingNumber.png)
 
 8.4 Routing Plan Priority
 
+![](images/TDA30_RoutingPlanPriority.png)
 
+8.1 System Setting
+
+Enable ARS Mode
+
+![](images/TDA30_EnableARS.png)
 
 [Site Home](../README.md)
 
