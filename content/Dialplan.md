@@ -77,9 +77,11 @@ Enter the leading digits for other PBXs in the setup and choose the correct Trun
 
 Own PBX code should be left blank.
 
-
+[Site Home](../README.md)
 
 [Automatic Route Selection](ARS.md)
+
+[KX-TDA3480 IPGW4 Configuration](IPGW4.md)
 
 [Home](README.md)
 

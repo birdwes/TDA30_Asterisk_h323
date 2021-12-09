@@ -1,5 +1,7 @@
 # ARS (Automatic Route Selection)
 
+[Site Home](../README.md)
+
 The Asterisk server is set up with a dial plan context, which allows access to the Asterisk extensions.
 
 This causes an issue if the IPGW4 is intended to be also used as a CO line.  To overcome this problem, the ARS feature of the TDA30 is used to allow calls from Asterisk to break out into a different context, which simulates the behaviour of a single CO line, i.e. numbers dialled are all external PSTN numbers.
@@ -65,6 +67,8 @@ Enable ARS Mode
 [Site Home](../README.md)
 
 [Dial Plan](Dialplan.md)
+
+[KX-TDA3480 IPGW4 Configuration](IPGW4.md)
 
 [Home](README.md)
 
