@@ -6,20 +6,33 @@ The Asterisk server is set up with a dial plan context, which allows access to t
 
 This causes an issue if the IPGW4 is intended to be also used as a CO line.  To overcome this problem, the ARS feature of the TDA30 is used to allow calls from Asterisk to break out into a different context, which simulates the behaviour of a single CO line, i.e. numbers dialled are all external PSTN numbers.
 
-Ofcom provides the [national-numbering-plan](https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf) and [national numbering data](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbering-data).  IDA (indirect access) carrier access numbers are in the range 124-140, 143-146, 148-149, 160-169 and 181 to 189.
+For the UK, Ofcom provides the [national-numbering-plan](https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf) and [national numbering data](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbering-data).  IDA (indirect access) carrier access numbers are in the range 124-140, 143-146, 148-149, 160-169 and 181 to 189.
 
 To avoid any conflict with an existing service code, should the call mistakenly escape to the PSTN via another CO line, we have chosen a range which is currently unused: 18930 to 18959.
 
 ## ARS on Asterisk
 
-Within the Asterisk dialing context we place the line:
+Within the Asterisk extension dialling context we place the line:
 
-`exten => _18930X.,1,Goto(sip_uk_transparent,${EXTEN:5},1)`
+```
+[sip_extensions]
+exten => _18930X.,1,Goto(sip_uk_transparent,${EXTEN:5},1)
+...
+```
 
 This could also be used to provide access to multiple SIP providers, e.g. by using 18931, 18932...
 
-`[globals]`
-`LOCAL_STD=01632`
+```
+[globals]
+LOCAL_STD=01632
+...
+
+[sip_uk_transparent]
+exten => _0.,1,Dial(SIP/${EXTEN}@sipgate-proxy,360)
+exten => _[2345678].,1,Dial(SIP/${LOCAL_STD}${EXTEN}@sipgate-proxy,360)
+exten => 999,1,Dial(SIP/999@sipgate-proxy,10000)
+...
+```
 
 
 
@@ -51,6 +64,8 @@ Select the TRG1-6 tab and choose the correct carrier for each trunk group.  Appl
 ![](images/TDA30_TrunkCarrier.png)
 
 Set up the leading numbers.  8.2 Leading Number
+
+TODO - ERROR ON THIS SCREENSHOT - 2-8 should go to routing plan #3. 
 
 ![](images/TDA30_TrunkLeadingNumber.png)
 

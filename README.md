@@ -11,6 +11,8 @@ How To guide for interfacing Asterisk SIP server to Panasonic KX-TDA30 with KX-T
 
 [Automatic Route Selection](./content/ARS.md) - Required for external Asterisk routing with the IPGW4 card.
 
+[Third Party Resources](./Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
+
 ## Essential terminology
 
 ### Legs

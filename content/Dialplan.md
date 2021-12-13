@@ -2,30 +2,55 @@
 
 [Site Home](../README.md)
 
-The choice of "Dial Plan" or "Numbering Plan" is possibly the most important decision process before attempting any further work.  Getting this wrong, will cause problems and pain, at a later date.
+The choice of "Dial Plan" or "Numbering Plan" is possibly the most important decision process before attempting any further work.  Getting this wrong, will cause problems and pain, at a later date.  Note that PSTN elements of this dialplan relate to the UK.
+
+## Internal Dialplan
 
 In this example:
 
-| Leading Digits | Purpose                 | Asterisk | TDA30-A | TDA30-B |
-| -------------- | ----------------------- | -------- | ------- | ------- |
-| 0              | Operator                |          |         |         |
-| 1xx.           | Special system numbers  |          |         |         |
-| 2xx            | Extensions              |          | X       |         |
-| 3xx            | Extensions              | X        |         |         |
-| 4xx            | Extensions              |          |         | X       |
-| 5xx            | Voicemail               |          | X       | X       |
-| 6xx            | Ring/hunt Groups        | 660-699  | 600-629 | 630-659 |
-| 7xx            | N/A                     |          |         |         |
-| 8xx            | Trunk Access (specific) | X        | X       | X       |
-| 9              | Trunk Access (general)  | X        | X       | X       |
+| Leading Digits | Purpose                 | Asterisk                             | TDA30 Site-A  | TDA30 Site-B  |
+| -------------- | ----------------------- | ------------------------------------ | ------------- | ------------- |
+| 0              |                         | Geographic or International PSTN DN. | Site Operator | Site Operator |
+| 1xx.           | Special system numbers  |                                      |               |               |
+| 2xx            | Extensions              |                                      | X             |               |
+| 3xx            | Extensions              | X                                    |               |               |
+| 4xx            | Extensions              |                                      |               | X             |
+| 5xx            | Voicemail               |                                      | X             | X             |
+| 6xx            | Ring/hunt Groups        | 660-699                              | 600-629       | 630-659       |
+| 7xx            | N/A                     |                                      |               |               |
+| 8xx            | Trunk Access (specific) | X                                    | X             | X             |
+| 9              | Trunk Access (general)  | X                                    | X             | X             |
+
+## PSTN Dialplan (UK)
+
+For the UK, Ofcom provides the [national-numbering-plan](https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf) and [national numbering data](https://www.ofcom.org.uk/phones-telecoms-and-internet/information-for-industry/numbering/numbering-data).
 
 
-##Programming the Dial Plan on the KX-TDA30
+
+| Leading digits| Purpose | Min remaining digits | Max remaining digits |
+| -------------- |---| -------------------- | -------------------- |
+| 00             |International| Unknown | Unknown |
+| 01             |Geographic| 9                    | 10                   |
+| 02             |Geographic| 10                   | 10                   |
+| 03             |National| 10                   | 10                   |
+| 04             |N/A| N/A                  | N/A                  |
+| 05             |Corporate| 10                   | 10                   |
+| 06             |N/A| N/A                  | N/A                  |
+| 07             |Personal Numbers, Radiopaging Service & Mobile Service numbers| 10                   | 10                   |
+| 08             | Non-Geographic                                               | 7                    | 10                   |
+| 09             |Non-Geographic| 10                   | 10                   |
+| 1              |Access codes| 2                    | 6                    |
+| 2-8            |Local PSTN (not available in some areas)| 5                    | 6                    |
+| 9              |Emergency| 2                    | 2                    |
+
+
+
+## Programming the Dial Plan on the KX-TDA30
 Decide on the number range for your extensions.  Renumber any spare extensions, so that they are all in that range.
 
 ![](images/TDA30_Extensions.png)
 
-If you want to groups in one range, across all devices, it will first be necessary to delete all Incoming call groups.  Delete all the ICD groups:
+If you want to groups in one range, across all devices, it will first be necessary to delete the "Floating Extension Number" for all Incoming call groups.  Select the column, right click to delete:
 
 ![](images/TDA30_Groups.png)
 
@@ -51,7 +76,7 @@ Click on the "Other PBX Extension" tab, and add the leading number ranges of Ast
 
 ![](images/TDA30_NumberingPlan_OtherPBX.png)
 
-Return to Groups, Incoming Call Distrubution Group, and re-add the necessary groups required, along with a suitable name:
+Return to Groups, Incoming Call Distribution Group, and re-add the necessary groups required, along with a suitable name:
 
 ![](images/TDA30_Groups2.png)
 
