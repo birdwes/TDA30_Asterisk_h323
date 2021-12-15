@@ -81,9 +81,12 @@ Enable ARS Mode
 
 [Site Home](../README.md)
 
-[Dial Plan](Dialplan.md)
+[Dial plan](./Dialplan.md)
 
-[KX-TDA3480 IPGW4 Configuration](IPGW4.md)
+[IPGW4 Configuration](./IPGW4.md) 
 
-[Home](README.md)
+[Essential Terminology](./Terminology.md) 
+
+[Third Party Resources](../Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
+
 

@@ -78,10 +78,11 @@ exten => _6[3-5]X,1,Dial(ooh323/${EXTEN}@TDA30_4_out,120,Ttr)
 
 [Site Home](../README.md)
 
-[Dial Plan](Dialplan.md)
+[Dial plan](./Dialplan.md)
 
-[Automatic Route Selection](ARS.md)
+[Automatic Route Selection](./ARS.md) - Required for external Asterisk routing with the IPGW4 card.
 
-[KX-TDA3480 IPGW4 Configuration](IPGW4.md)
+[Essential Terminology](./Terminology.md) 
 
-[Home](README.md)
+[Third Party Resources](../Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
+

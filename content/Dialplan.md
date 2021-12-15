@@ -102,11 +102,16 @@ Enter the leading digits for other PBXs in the setup and choose the correct Trun
 
 Own PBX code should be left blank.
 
+
 [Site Home](../README.md)
 
-[Automatic Route Selection](ARS.md)
+[Automatic Route Selection](./ARS.md) - Required for external Asterisk routing with the IPGW4 card.
 
-[KX-TDA3480 IPGW4 Configuration](IPGW4.md)
+[IPGW4 Configuration](./IPGW4.md) 
 
-[Home](README.md)
+[Essential Terminology](./Terminology.md) 
+
+[Third Party Resources](../Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
+
+
 
