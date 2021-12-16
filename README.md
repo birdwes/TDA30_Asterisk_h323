@@ -19,9 +19,17 @@ The cards required for the TDA30 to support analogue terminal equipment are of t
 
 If you optionally wish to use SIP-ATA adaptors, you will also need a "LCOT4" card.  We shall not describe that configuration here.
 
-### Advantages of using h.323 over SIP
+### Comparison of using h.323 instead of a SIP ATA
 
-The IPGW4 card is configured in the TDA30 as a "Private Circuit" or "TIE line".  This allows seamless extension to extension between VoIP and analogue extensions, in addition to providing access to the PSTN via the Asterisk server.  Trying to set up a similar configuration with SIP ATAs is messy and the author has found it to be unreliable too.  Additionally, because the TDA30 employs a digital backplane, once the ADC conversion is done in the LCOT card, it stays in the digital domain, right up until the exchange serving the dialled device, be it local, or across the globe.  Using SIP ATAs with a LCOT card requires three conversions instead of one.
+- #### Advantages
+  The IPGW4 card is configured in the TDA30 as a "Private Circuit" or "TIE line".  This allows seamless extension to extension dialling between VoIP and analogue extensions, in addition to providing access to the PSTN via the Asterisk server.  Trying to set up a similar configuration with SIP ATAs is awkward and the author has found it to be unreliable too.  Additionally, because the TDA30 employs a digital backplane, once the ADC conversion is done in the SLC card, it stays in the digital domain, right up until the destination exchange serving the callee, be it local, or across the globe.  
+
+  Using SIP ATAs with a LCOT card requires three conversions to that point, instead of one.  Additionally, to direct an incoming call to an arbitrary extension, presents its own problems.
+
+- #### Disadvantages
+  Using SIP, RTP packets may be routed separately from the command channel with the server.  With h.323, because all RTP packets have to travel via the Asterisk server, there may be a slightly increased delay in the audio path.
+
+  For a publicly hosted Asterisk server, setting up an IPSEC tunnel or VPN is an absolute necessity.
 
 ### Prerequisites
 
@@ -35,8 +43,9 @@ You must have
 
 - SLC4 and/or SLC8 cards
 
-- a working Asterisk server 
-  - if the server is externally hosted, you must provide a routed IPSEC tunnel or similar VPN solution, between the private LAN segment on which the IPGW4 card is to be located, and the Asterisk server.
+- a working Asterisk server, to which you have full access. 
+  - if you want PSTN access from the server, you must have one or more accounts with a SIP provider. I have found sipgate.co.uk to provide a reliable service.
+  - if the server is publicly hosted, you <ins>must</ins> provide a routed IPSEC tunnel or similar VPN solution, between the private LAN segment on which the IPGW4 card is to be located, and the Asterisk server.
 
 
 ## Contents (incomplete)
@@ -50,7 +59,6 @@ You must have
 [Essential Terminology](./content/Terminology.md) 
 
 [Third Party Resources](./Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
-
 
 
 
