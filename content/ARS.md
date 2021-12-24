@@ -12,15 +12,25 @@ To avoid any conflict with an existing service code, should the call mistakenly 
 
 ## ARS on Asterisk
 
-Within the Asterisk extension dialling context we place the line:
+Within the Asterisk extension dialling context (`extensions.conf`) we place the line:
 
 ```
 [sip_extensions]
-exten => _18930X.,1,Goto(sip_uk_transparent,${EXTEN:5},1)
+exten => _1893[0-2]X.,1,Goto(sip_uk_transparent,${EXTEN:5},1)
 ...
 ```
 
-This could also be used to provide access to multiple SIP providers, e.g. by using 18931, 18932...
+The above assumes that your default extension dial context is `[sip_extensions]`
+
+We use three carrier access codes, to eliminate some interdigit timeout delays, if this was all handled by 18930.  This corresponds to part of the DN2IP table of the IPGW4, which specifies the maximum number of dialled digits, for each leading number.
+
+| Carrier Access Code | Purpose                                       |
+| ------------------- | --------------------------------------------- |
+| 18930               | up to 20 digits, e.g. international calls     |
+| 18931               | up to 11 digits, i.e. national dialling       |
+| 18932               | up to 6 digits, i.e. local area code dialling |
+
+This concept could also be modified to provide access to multiple SIP providers.
 
 ```
 [globals]
@@ -88,5 +98,4 @@ Enable ARS Mode
 [Essential Terminology](./Terminology.md) 
 
 [Third Party Resources](../Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
-
 

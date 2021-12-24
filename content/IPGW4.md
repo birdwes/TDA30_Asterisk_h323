@@ -8,6 +8,8 @@ Extensive configuration information is provided in the manuals "4-Channel VoIP G
 
 If your card requires restoring to factory defaults, the reset procedure is described in "Getting Started" appendix C.
 
+The IPGW4 allows remote configuration of the PBX, as well as the card, over TCP/IP (note that this requires PBX firmware 4 or later).
+
 Once the card is reset to factory defaults, it has the following settings, to access it:
 
 |  | Value |
