@@ -46,7 +46,7 @@ exten => 999,1,Dial(SIP/999@sipgate-proxy,10000)
 
 
 
-This accepts dialled numbers prefixed with 18930, strips the first five digits, and redirects them to the context `sip_uk_transparent`.  This context behaves as if it is on the local PSTN, i.e. numbers in the range 2 to 8 are prefixed with the local area code.
+This accepts dialled numbers prefixed with 1893[0-2], strips the first five digits, and redirects them to the context `sip_uk_transparent`.  This context behaves as if it is on the local PSTN, i.e. numbers in the range 2 to 8 are prefixed with the local area code.
 
 ### Exceptions
 The national numbering plan prohibits local number dialling, without a code in the following regions.
