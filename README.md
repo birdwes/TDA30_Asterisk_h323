@@ -63,6 +63,8 @@ You must have
 
 One Asterisk server can handle multiple KX-TDA30 systems and routing of multiple SIP accounts.
 
+---
+
 ## Contents
 
 [Dial plan](./content/Dialplan.md)
@@ -72,6 +74,10 @@ One Asterisk server can handle multiple KX-TDA30 systems and routing of multiple
 [IPGW4 Configuration](./content/IPGW4.md) 
 
 [Essential Terminology](./content/Terminology.md) 
+
+[Wiring Notes](./content/WiringNotes.md) 
+
+[Emergency Considerations](./content/OtherConsiderations.md) 
 
 [Third Party Resources](./Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
 
