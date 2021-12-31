@@ -7,7 +7,7 @@ This configuration guide is a "How To" for those wishing to connect an Asterisk 
 
 ### Motivation
 
-With the transition to modern VoIP services already happening, concerns are being raised by a number of people operating "Heritage Telecoms" equipment, which depends upon Loop Disconnect dialling.  The configuration described here, allows a number of LD telephones to be seamlessly connected to modern VoIP services, and retain access to the PSTN.  Additionally, they may join an existing Asterisk VoIP setup, which already has other VoIP extensions.
+With the transition to modern VoIP services already happening (for more information see [Openreach Stop Sell List](https://www.openreach.co.uk/cpportal/products/product-withdrawal/stop-sells-updates)), concerns are being raised by a number of people operating "Heritage Telecoms" equipment, which depends upon Loop Disconnect dialling.  The configuration described here, allows a number of LD telephones to be seamlessly connected to modern VoIP services, and retain access to the PSTN.  Additionally, they may join an existing Asterisk VoIP setup, which already has other VoIP extensions.
 
 The KX-TDA30 permits cards which support analogue terminal equipment to be fitted.  In addition, there are four built in hybrid ports, which support analogue and digital terminal equipment.
 

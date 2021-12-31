@@ -14,7 +14,7 @@ The TDA30 supports a lookup table of emergency call numbers.
 
 If the TDA30 has a LCOT4 POTS card, in the event of a power failure (and optional battery failure)  to the CCU, analogue ports XDP1 and XDP2 (of the built in DHLC4 card) are physically connected directly to LCOT ports 1 and 2.  If you are placing the unit into service in any location where emergency calls might be made, consideration should be taken of the location and type of telephones connected to these extensions.  In my case for example, the local PSTN still supports LD dialling.  This will vary by your location.  You may have to consider fitting a DTMF telephone(s) to that extension.
 
-When 21CN VoIP via SOGEA access, is finally rolled out to the whole of the UK, this will present the problem of emergency numbers being dependent upon power to the router or ATA that Openreach provide to replace your POTS line access.
+When 21CN VoIP via SOGEA access, is finally rolled out to the whole of the UK (for more information see [Openreach Stop Sell List](https://www.openreach.co.uk/cpportal/products/product-withdrawal/stop-sells-updates)), this will present the problem of emergency numbers being dependent upon power to the router or ATA that Openreach provide to replace your POTS line access.
 
 I use a UPS system to protect my PBX, router and Raspberry Pi (IPSEC router).
 
