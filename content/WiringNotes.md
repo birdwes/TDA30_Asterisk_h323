@@ -6,7 +6,7 @@ It is important to follow this carefully, if you wish to retain consistent A (+v
 
 
 
-![Plug diagrams](.\images\plugs.png)
+![Plug diagrams](./images/plugs.png)
 
 ### Panasonic TDA30 RJ45 (UK)
 
