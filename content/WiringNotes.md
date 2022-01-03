@@ -2,7 +2,7 @@
 
 [Site Home](../README.md)
 
-It is important to follow this carefully, if you wish to retain consistent A (+ve) B (-ve) polarity throughout your installation.  Some say that polarity is not important, though some older equipment may experience problems if is not correct.  Polarity is very important for digital proprietary equipment.  Be cautious that Panasonic TDA RJ11 pins are reversed from RJ45.  Note also that CO connections are reversed from extensions.
+It is important to follow this carefully, if you wish to retain consistent A (+ve) B (-ve) polarity throughout your installation.  SIN351 Tables 1 and 2 now suggests that polarity is not important, though some older equipment may experience problems if is not correct.  Polarity is critical for digital proprietary equipment.  Be cautious that Panasonic TDA30 regional variant RJ11 pins are reversed from RJ45.  Note also that CO connections are reversed from extensions.
 
 
 
@@ -32,7 +32,7 @@ It is important to follow this carefully, if you wish to retain consistent A (+v
 |    3     |    Green    |          Blue           |   Tip - A   |   Ring - B   |  Ring - B  |            |
 |    4     |   Yellow    |           Red           |             |   D2 - Low   |            |  D2 - Low  |
 
-
+In the wild, you will find RJ11 connectors with inverted wiring, crossover wiring and all manner of other combinations, so check, before you re-purpose an existing cable.
 
 ### BT 431A
 
@@ -51,7 +51,7 @@ Note that there is some disagreement about pin numbers, depending on which speci
 |  6   |        N/A        |    DLC D1     |  Green/White  |      N/A      |         Black          |
 
 
-See also [https://telephonesuk.org.uk/wiring-info/](https://telephonesuk.org.uk/wiring-info/)
+See also [https://telephonesuk.org.uk/wiring-info/](https://telephonesuk.org.uk/wiring-info/) and [https://www.britishtelephones.com/pst1.htm](https://www.britishtelephones.com/pst1.htm)
 
 ---
 
