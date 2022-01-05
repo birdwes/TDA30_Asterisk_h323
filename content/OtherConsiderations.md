@@ -18,6 +18,16 @@ When 21CN VoIP via SOGEA access, is finally rolled out to the whole of the UK (f
 
 I use a UPS system to protect my PBX, router and Raspberry Pi (IPSEC router).
 
+## CO Lines that are unavailable
+
+To avoid sending an emergency call to a CO line that is unavailable, it is important to ensure that all unused and faulty CO lines are excluded from availability:
+
+- 1.1 Configuration, Slot.  Right click on each CO card and select "Port Property".  Each port will be listed as either "INS" (In Service) or "OUS" (out of service).  Ensure that only connected and functioning ports are INS.  All other ports should be OUS.
+
+The TDA30 provides a facility to automatically monitor LCO port availability and switch their INS/OUS status, depending on presence of a loop current.  This may help if you are using SIP ATAs, should one of them develop a fault.
+
+- 2.9 System, System Options, Tab Option 5.  Busy Out->Busy Out for Analogue CO.  Enable this.
+
 
 ---
 
