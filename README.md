@@ -1,4 +1,8 @@
+![Banner image](./banner.png)
+
 # Interfacing the Panasonic KX-TDA30 to Asterisk, with h.323
+
+
 How To guide for interfacing Asterisk VoIP server to Panasonic KX-TDA30 with KX-TDA3480 IPGW4 card.
 
 ## Abstract
