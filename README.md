@@ -1,4 +1,8 @@
+![Banner image](./banner.png)
+
 # Interfacing the Panasonic KX-TDA30 to Asterisk, with h.323
+
+
 How To guide for interfacing Asterisk VoIP server to Panasonic KX-TDA30 with KX-TDA3480 IPGW4 card.
 
 ## Abstract
@@ -24,7 +28,7 @@ If you optionally wish to use SIP-ATA adaptors, you will also need a "LCOT4" car
 - #### Advantages
   The IPGW4 card is configured in the TDA30 as a "Private Circuit" or "TIE line".  This allows seamless extension to extension dialling between VoIP and analogue extensions, in addition to providing access to the PSTN via the Asterisk server.  Trying to set up a similar configuration with SIP ATAs is awkward and the author has found it to be unreliable too.  Additionally, because the TDA30 employs a digital backplane, once the ADC conversion is done in the SLC card, it stays in the digital domain, right up until the destination exchange serving the callee, be it local, or across the globe.
 
-  Using SIP ATAs with a LCOT card requires three conversions to that point, instead of one.  Additionally, to direct an incoming call to an arbitrary extension, presents its own problems.
+  Using SIP ATAs with a LCOT card requires three conversions to that point, instead of one.  Additionally, to direct an incoming call to an arbitrary extension, presents its own problems.  There are also dozens of settings in each ATA.  If you use ATAs, you may find that you have to adjust gain settings, by trial and error.
 
   The IPGW4, in this configuration can also handle multiple SIP accounts (via Asterisk) and send them to individual DIL destinations (extensions or ICD groups), or emulate ISDN MSN destinations.  It is capable of handling four simultaneous calls.  It can also route out via multiple SIP accounts.
 
