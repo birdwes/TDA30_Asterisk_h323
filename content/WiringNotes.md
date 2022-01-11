@@ -12,21 +12,21 @@ Be cautious that Panasonic TDA30 regional variant RJ11 pins are reversed from RJ
 
 ### Panasonic TDA30 RJ45 (UK)
 
-| RJ45 pin | RJ45 TIA568B colour | CW1311 | LCOT - RJ45 | DHLC4 - RJ45 | SLC - RJ45 | DLC - RJ45 |
-| :------: | :-----------------: | :----: | :---------: | :----------: | :--------: | :--------: |
-|    1     |    Orange/White     |        |             |              |            |            |
-|    2     |       Orange        |        |             |              |            |            |
-|    3     |     Green/White     | Black  |             |   D2 - Low   |            |  D2 - Low  |
-|    4     |        Blue         |  Red   |   Tip - A   |   Ring - B   |  Ring - B  |            |
-|    5     |     Blue/White      | Green  |  Ring - B   |   Tip - A    |  Tip - A   |            |
-|    6     |        Green        | Yellow |             |  D1 - High   |            | D1 - High  |
-|    7     |     Brown/White     |        |             |              |            |            |
-|    8     |        Brown        |        |             |              |            |            |
+| RJ45 pin | RJ45 TIA568B colour | CW1311 | § LCOT - RJ45 | DHLC4 - RJ45 | SLC - RJ45 | DLC - RJ45 |
+| :------: | :-----------------: | :----: | :-----------: | :----------: | :--------: | :--------: |
+|    1     |    Orange/White     |        |               |              |            |            |
+|    2     |       Orange        |        |               |              |            |            |
+|    3     |     Green/White     | Black  |               |   D2 - Low   |            |  D2 - Low  |
+|    4     |        Blue         |  Red   |    Tip - A    |   Ring - B   |  Ring - B  |            |
+|    5     |     Blue/White      | Green  |   Ring - B    |   Tip - A    |  Tip - A   |            |
+|    6     |        Green        | Yellow |               |  D1 - High   |            | D1 - High  |
+|    7     |     Brown/White     |        |               |              |            |            |
+|    8     |        Brown        |        |               |              |            |            |
 
-\* *Note that for Panasonic LCOT, DHLC (built in), SLC and DLC cards with RJ11 connectors, the wiring is reversed.*
+§ *I have seen old dial-up modem leads with this configuration.*
 
 ### Panasonic TDA30 RJ11 (Some other regions)
-
+\* *Note that for Panasonic LCOT, DHLC (built in), SLC and DLC cards with RJ11 connectors, the wiring is reversed, compared to RJ45.*
 | RJ11 pin | CW1311 colour | CW1311 colour (alternate) | LCOT - RJ11 | DHLC4 - RJ11 | SLC - RJ11 | DLC - RJ11 |
 | :------: | :-----------: | :-----------------------: | :---------: | :----------: | :--------: | :--------: |
 |    1     |     Black     |           White           |             |  D1 - High   |            | D1 - High  |
