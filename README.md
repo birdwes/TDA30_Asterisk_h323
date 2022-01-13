@@ -13,7 +13,7 @@ This configuration guide is a "How To" for those wishing to connect an Asterisk 
 
 With the transition to modern VoIP services already happening (for more information see [Openreach Stop Sell List](https://www.openreach.co.uk/cpportal/products/product-withdrawal/stop-sells-updates)), concerns are being raised by a number of people operating "Heritage Telecoms" equipment, which depends upon Loop Disconnect dialling.  The configuration described here, allows a number of LD telephones to be seamlessly connected to modern VoIP services, and retain access to the PSTN.  Additionally, they may join an existing Asterisk VoIP setup, which already has other VoIP extensions.
 
-The KX-TDA30 permits cards which support analogue terminal equipment to be fitted.  In addition, there are four built in hybrid ports, which support analogue and digital terminal equipment.
+The KX-TDA30 permits expansion cards which support analogue terminal equipment to be fitted.  In addition, there are four built in hybrid ports, which simultaneously support both analogue and digital terminal equipment.
 
 By not using VoIP extensions, we avoid the need to provide additional power at every extension.
 
@@ -21,14 +21,14 @@ The card required to interface the TDA30 to Asterisk, by h.323 is the "IPGW4" (K
 
 The cards required for the TDA30 to support analogue terminal equipment are of the "SLC4" and/or the "SLC8" type.  Their line characteristics correspond closely with the existing POTS PSTN (at the time of writing).  These cards support both LD and DTMF dialling.
 
-If you optionally wish to use SIP-ATA adaptors, you will also need a "LCOT4" card.  We shall not describe that configuration here.
+If you optionally wish to use the PSTN or SIP-ATA adaptors, you will also need a "LCOT4" card.  We shall not describe SIP ATA configuration here.
 
 ### Comparison of using h.323 instead of a SIP ATA
 
 - #### Advantages
   The IPGW4 card is configured in the TDA30 as a "Private Circuit" or "TIE line".  This allows seamless extension to extension dialling between VoIP and analogue extensions, in addition to providing access to the PSTN via the Asterisk server.  Trying to set up a similar configuration with SIP ATAs is awkward and the author has found it to be unreliable too.  Additionally, because the TDA30 employs a digital backplane, once the ADC conversion is done in the SLC card, it stays in the digital domain, right up until the destination exchange serving the callee, be it local, or across the globe.
 
-  Using SIP ATAs with a LCOT card requires three conversions to that point, instead of one.  Additionally, to direct an incoming call to an arbitrary extension, presents its own problems.  There are also dozens of settings in each ATA.  If you use ATAs, you may find that you have to adjust gain settings, by trial and error.
+  Using SIP ATAs with a LCOT card requires three conversions to that point, instead of one.  Additionally, to direct an incoming call to an arbitrary extension, presents its own problems.  There are also dozens of settings in each ATA.  If you use ATAs, you may find that you have to adjust gain settings, by trial and error.  Each SIP ATA would require an individual power supply, network switch port and connection to a LCOT card.  Avoiding ATAs eliminates much cabling.
 
   The IPGW4, in this configuration can also handle multiple SIP accounts (via Asterisk) and send them to individual DIL destinations (extensions or ICD groups), or emulate ISDN MSN destinations.  It is capable of handling four simultaneous calls.  It can also route out via multiple SIP accounts.
 
@@ -37,6 +37,12 @@ If you optionally wish to use SIP-ATA adaptors, you will also need a "LCOT4" car
   Using SIP, RTP packets may be routed separately from the command channel with the server.  With h.323, because all RTP packets have to travel via the Asterisk server, there may be a slightly increased delay in the audio path.
 
   For a publicly hosted Asterisk server, setting up an IPSEC tunnel or routed VPN is an absolute necessity.
+  
+- #### Limitations
+
+  The IPGW4 card QSIG implementation does not support "anti-hairpinning"/"anti-tromboning".  What this means is that if a call is transferred from a TDA30 to the Asterisk server, and then back to the TDA30, the call will consume two h.323 channels instead of "folding" the remote call legs back into the TDA30.
+
+
 
 ### Prerequisites
 
@@ -61,7 +67,7 @@ You must have
 - 4 Digital extensions (built in Hybrid ports).  Note that these are different independent extensions to the analogue extensions presented within the same RJ45 sockets.
 - Up to 4 h.323 channels, which serve as VoIP CO lines as well as inter-site routing, via a single KX-TDA3480 card.
 - Up to 12 CO lines via 3 LCOT4* cards.
-- CLI presentation on up to 4 analogue extensions (built in) or 8 by addition of EXT-CID card.
+- CLI presentation on up to 4 analogue extensions (built in) or 8 by addition of a single EXT-CID card.
 
 \* *There is a limit of 3 Type A (4 port) slot cards.*
 
