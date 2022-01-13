@@ -10,13 +10,13 @@ This is a quick fix for situations where there is not enough existing Cat5 struc
 
 |    Cat5e     | RJ45 Pin | Hybrid Port 1 | Hybrid Port 2 |
 | :----------: | :------: | :-----------: | :-----------: |
-| Orange/White |    1     |               |   Black - 3   |
-|    Orange    |    2     |               |    Red - 4    |
+| Orange/White |    1     |               |   Green - 5   |
+|    Orange    |    2     |               |   Red  - 4    |
 | Green/White  |    3     |   Black - 3   |               |
 |     Blue     |    4     |   Red  - 4    |               |
 |  Blue/White  |    5     |   Green - 5   |               |
 |    Green     |    6     |  Yellow - 6   |               |
-| Brown/White  |    7     |               |   Green - 5   |
+| Brown/White  |    7     |               |   Black - 3   |
 |    Brown     |    8     |               |  Yellow - 6   |
 
 ## MUX 1x Super Hybrid DPT+SLT, plus 2x SLT to/from single Cat5e
@@ -34,8 +34,13 @@ This is a quick fix for situations where there is not enough existing Cat5 struc
 
 ## TDA30 - Music on Hold 
 
-Module GPD2846A is perfect for this.  It auto-starts upon the application of power, and plays ad infinitum.  It is  very loud.  You will have to limit the output.  I used a 10K potentiometer to do this.  It requires a micro SD card and a 5v micro USB power supply.
+Module GPD2846A is perfect for this.  It auto-starts upon the application of power, and plays ad infinitum.  It is  very loud.  You will have to limit the output.  I used a 10K potentiometer to do this.  It requires a micro SD card and a soldered 5v power supply.
 
 ## Asterisk - Speaking Clock (TIM) - 123
 
 This is an absolute must: https://github.com/paulseward/asterisk-tim 
+
+## DPH4 Card
+
+The connectors appear to be this: [https://uk.farnell.com/wago/733-110/terminal-block-pluggable-10pos/dp/1891578?st=733-110](https://uk.farnell.com/wago/733-110/terminal-block-pluggable-10pos/dp/1891578?st=733-110)
+

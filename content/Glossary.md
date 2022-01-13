@@ -14,14 +14,14 @@
 | DDI          | "Direct Dial Inwards".  Synonymous with DIL                  |
 | DIL          | "Direct Inward Line".  Facility which enables a call from a CO line to a single extension, or extension group within a PBX setup. |
 | DLC          | Panasonic Proprietary "Digital Loop Carrier".                |
-| DTMF         |                                                              |
+| DTMF         | Dual Tone Multi Frequency, a method of transmitting digits over an analogue channel.  Commonly used by newer analogue POTS syle telephones. |
 | h.323        |                                                              |
 | IDA          | "Indirect Access".  The subscriber may manually dial, or have programmed into their PBX, a code which selects billing from a carrier other than the PSTN line provider. |
-| IPSEC        |                                                              |
-| LAN          |                                                              |
-| LD           |                                                              |
+| IPSEC        | IP Security.  A means of securely connecting two networks together, over a public IP connection. |
+| LAN          | Local Area Network,                                          |
+| LD           | Loop Disconnect.  A means of dialing a number, but applying a series of pulsed disconnects across a POTS style line. |
 | LLU          | "Local Loop Unbundling".                                     |
-| MSN          | "Multiple Subscriber Number".                                |
+| MSN          | "Multiple Subscriber Number".  An ISDN facility which enables multiple numbers to be received by opne or more ISDN lines.  The PBX can distiguish the dialled number, and reroute the call accordingly. |
 | PABX         | "Private Automated Branch Exchange".                         |
 | PBX          | "Private Branch Exchange".                                   |
 | POTS         | "Plain Old Telephony System".  The PSTN version of an analogue line, provided from your local exchange and line provider.  POTS is being phased out in the UK. |
@@ -30,7 +30,7 @@
 | RTP          |                                                              |
 | SIP          |                                                              |
 | SLC          | "Subscriber Loop Carrier".  Panasonic Analogue Line Card.  Provides an extension to a PBX, which is electrically compatible with a POTS line. |
-| SLT          | Telephone, compatible with SLC port.                         |
+| SLT          | Telephone, compatible with SLC port.  "Single Line Telephone". |
 | SoGEA        | "Single Order Generic Ethernet Access".  [https://www.btwholesale.com/news-and-resources/features-and-campaigns/sogea.html](https://www.btwholesale.com/news-and-resources/features-and-campaigns/sogea.html) |
 | TIE          | A private circuit which connects two or more PBXs together.  |
 | TRS          | "Trunk Route Selection".                                     |
