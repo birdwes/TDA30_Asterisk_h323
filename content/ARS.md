@@ -75,7 +75,7 @@ Set up the Carriers.  8.5 Carrier
 | SIP-Internal  | H.323 without access code, to access Asterisk internal extensions. |
 | H323-20-digit | International H.323                                          |
 | H323-11-digit | National H.323                                               |
-| H323-6-digit  | Local exchange are calls, H.323                              |
+| H323-6-digit  | Local exchange area calls, H.323                             |
 
 ![](images/TDA30_Carrier.png)
 
@@ -95,7 +95,9 @@ Select the TRG1-16 tab and choose the correct carrier for each trunk group.  App
 |      3       | SIP-Internal  |       -       |
 |      4       | H323-20-digit |    C-PSTN     |
 |      5       | H323-11-digit |    C-PSTN     |
-|      6       | H323-11-digit |    C-PSTN     |
+|      6       | H323-6-digit  |    C-PSTN     |
+
+Setting this up is a little tedious, as each day of the week must be set up, for each plan.  It is possible to right click and select a priority row, and copy-paste it to another day.
 
 ![](images/TDA30_RoutingPlanPriority.png)
 
@@ -104,6 +106,8 @@ Set up the leading numbers.  8.2 Leading Number
 You can import this table by choosing from the Menu Tool->Import->ARS - Leading Digit from this file: [arsl.csv](files/TDA30/arsl.csv)
 
 The file may be edited in popular spreadsheet software.
+
+Place exception codes at the top of the list, e.g. in this example I want 999 and 112 emergency calls to always try the PSTN first (plan 1).  I also want 123 to try the Asterisk server first (plan 4).
 
 ![](images/TDA30_TrunkLeadingNumber.png)
 
