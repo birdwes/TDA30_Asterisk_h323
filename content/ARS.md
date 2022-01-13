@@ -64,24 +64,48 @@ The national numbering plan prohibits local number dialling, without a code in t
 
 ## ARS on the TDA30
 
+### Carrier
+
 Set up the Carriers.  8.5 Carrier
+
+| Carrier Name  | Purpose                                                      |
+| :-----------: | :----------------------------------------------------------- |
+|    C-PSTN     | PSTN CO line(s)                                              |
+|   C-SIP-ATA   | SIP ATA VoIP CO line(s)                                      |
+| SIP-Internal  | H.323 without access code, to access Asterisk internal extensions. |
+| H323-20-digit | International H.323                                          |
+| H323-11-digit | National H.323                                               |
+| H323-6-digit  | Local exchange are calls, H.323                              |
 
 ![](images/TDA30_Carrier.png)
 
 
-Select the TRG1-6 tab and choose the correct carrier for each trunk group.  Apply.
+Select the TRG1-16 tab and choose the correct carrier for each trunk group.  Apply.
 
 ![](images/TDA30_TrunkCarrier.png)
 
-Set up the leading numbers.  8.2 Leading Number
-
-TODO - ERROR ON THIS SCREENSHOT - 2-8 should go to routing plan #3. 
-
-![](images/TDA30_TrunkLeadingNumber.png)
+### Routing Plan
 
 8.4 Routing Plan Priority
 
+| Routing Plan |  Priority 1   |  Priority 2   |
+| :----------: | :-----------: | :-----------: |
+|      1       |    C-PSTN     | H323-20-digit |
+|      2       |   C-SIP-ATA   |       -       |
+|      3       | SIP-Internal  |       -       |
+|      4       | H323-20-digit |    C-PSTN     |
+|      5       | H323-11-digit |    C-PSTN     |
+|      6       | H323-11-digit |    C-PSTN     |
+
 ![](images/TDA30_RoutingPlanPriority.png)
+
+Set up the leading numbers.  8.2 Leading Number
+
+You can import this table by choosing from the Menu Tool->Import->ARS - Leading Digit from this file: [arsl.csv](files/TDA30/arsl.csv)
+
+The file may be edited in popular spreadsheet software.
+
+![](images/TDA30_TrunkLeadingNumber.png)
 
 8.1 System Setting
 
