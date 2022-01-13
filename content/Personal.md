@@ -44,3 +44,4 @@ This is an absolute must: https://github.com/paulseward/asterisk-tim
 
 The connectors appear to be this: [https://uk.farnell.com/wago/733-110/terminal-block-pluggable-10pos/dp/1891578?st=733-110](https://uk.farnell.com/wago/733-110/terminal-block-pluggable-10pos/dp/1891578?st=733-110)
 
+The DPH4 card may be installed only in slots 08 or 09.
