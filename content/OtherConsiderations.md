@@ -18,6 +18,8 @@ When 21CN VoIP via SOGEA access, is finally rolled out to the whole of the UK (f
 
 I use a UPS system to protect my PBX, router and Raspberry Pi (IPSEC router).
 
+If you have only one PSTN line, such as in a residential situation you might want to consider connecting both LCOT ports 1 and 2 to the single line, in parallel.  This will allow power failure emergency calls to be dialled from either of two extensions, instead of one.
+
 ## CO Lines that are unavailable
 
 To avoid sending an emergency call to a CO line that is unavailable, it is important to ensure that all unused and faulty CO lines are excluded from availability:
