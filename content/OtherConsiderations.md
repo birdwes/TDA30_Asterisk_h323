@@ -28,7 +28,7 @@ To avoid sending an emergency call to a CO line that is unavailable, it is impor
 
 The TDA30 provides a facility to automatically monitor LCO port availability and switch their INS/OUS status, depending on presence of a loop current.  This may help if you are using SIP ATAs, should one of them develop a fault.
 
-- 2.9 System, System Options, Tab Option 5.  Busy Out->Busy Out for Analogue CO.  Enable this.
+- 2.9 System, System Options, Tab Option 5.  Busy Out->Busy Out for Analogue CO.  Consider enabling this.
 
 
 ---
