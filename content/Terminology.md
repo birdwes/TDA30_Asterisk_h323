@@ -67,13 +67,19 @@
 
 
 
-[Site Home](../README.md)
+---
 
 [Dial plan](./Dialplan.md)
 
 [Automatic Route Selection](./ARS.md) - Required for external Asterisk routing with the IPGW4 card.
 
 [IPGW4 Configuration](./IPGW4.md) 
+
+[Essential Terminology](./Terminology.md) 
+
+[Wiring Notes](./WiringNotes.md) 
+
+[Emergency Considerations](./OtherConsiderations.md) 
 
 [Third Party Resources](../Third%20Party%20Resources/README.md) - Various specifications describing dialling, ringing and other signalling.
 
