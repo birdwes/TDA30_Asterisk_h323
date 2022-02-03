@@ -2,8 +2,9 @@
 
 # Interfacing the Panasonic KX-TDA30 to Asterisk, with h.323
 
-
 How To guide for interfacing Asterisk VoIP server to Panasonic KX-TDA30 with KX-TDA3480 IPGW4 card.
+
+It is likely to also work with TDA100, TDA200 and TDA600 (although the card model numbers will differ) - the system programming software is almost identical.  You may have issues with KX-TDE or NCP systems if the H.323 license key has been lost, or never installed.
 
 ## Abstract
 
@@ -11,9 +12,9 @@ This configuration guide is a "How To" for those wishing to connect an Asterisk 
 
 ### Motivation
 
-With the transition to modern VoIP services already happening (for more information see [Openreach Stop Sell List](https://www.openreach.co.uk/cpportal/products/product-withdrawal/stop-sells-updates)), concerns are being raised by a number of people operating "Heritage Telecoms" equipment, which depends upon Loop Disconnect dialling.  The configuration described here, allows a number of LD telephones to be seamlessly connected to modern VoIP services, and retain access to the PSTN.  Additionally, they may join an existing Asterisk VoIP setup, which already has other VoIP extensions.
+With the PSTN transition to modern VoIP services already happening (for more information see [Openreach Stop Sell List](https://www.openreach.co.uk/cpportal/products/product-withdrawal/stop-sells-updates)), concerns are being raised by a number of people operating "Heritage Telecoms" equipment, which depends upon Loop Disconnect dialling.  The configuration described here, allows a number of LD telephones to be seamlessly connected to modern VoIP services, and retain access to the PSTN.  Additionally, they may join an existing Asterisk VoIP setup, which already has other VoIP extensions.
 
-The KX-TDA30 permits expansion cards which support analogue terminal equipment to be fitted.  In addition, there are four built in hybrid ports, which simultaneously support both analogue and digital terminal equipment.
+The KX-TDA30 permits expansion cards which support analogue telephones to be fitted.  In addition, there are four built in hybrid ports, which simultaneously support both analogue and digital proprietary telephones.
 
 By not using VoIP extensions, we avoid the need to provide additional power at every extension.
 

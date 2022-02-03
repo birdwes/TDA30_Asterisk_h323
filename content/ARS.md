@@ -29,6 +29,7 @@ We use three carrier access codes, to eliminate some interdigit timeout delays, 
 | 18930               | up to 20 digits, e.g. international calls     |
 | 18931               | up to 11 digits, i.e. national dialling       |
 | 18932               | up to 6 digits, i.e. local area code dialling |
+|                     |                                               |
 
 This concept could also be modified to provide access to multiple SIP providers.
 
