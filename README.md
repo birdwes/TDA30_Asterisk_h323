@@ -10,6 +10,8 @@ It is likely to also work with TDA100, TDA200 and TDA600 (although the card mode
 
 This configuration guide is a "How To" for those wishing to connect an Asterisk VoIP server to the Panasonic KX-TDA30 PABX, using the IPGW4 (KX-TDA3480) h.323 expansion card.
 
+This project is targeted at an audience interested in maintaining heritage telecoms equipment, much of which is many decades old.  If you are looking for a commercial set-up, you are in the wrong place.
+
 ### Motivation
 
 With the PSTN transition to modern VoIP services already happening (for more information see [Openreach Stop Sell List](https://www.openreach.co.uk/cpportal/products/product-withdrawal/stop-sells-updates)), concerns are being raised by a number of people operating "Heritage Telecoms" equipment, which depends upon Loop Disconnect dialling.  The configuration described here, allows a number of LD telephones to be seamlessly connected to modern VoIP services, and retain access to the PSTN.  Additionally, they may join an existing Asterisk VoIP setup, which already has other VoIP extensions.
