@@ -61,7 +61,7 @@ You must have
 
 - a working Asterisk server, to which you have full access. 
   - if you want PSTN access from the server, you must have one or more accounts with a SIP provider. I have found sipgate.co.uk to provide a reliable service.
-  - if the server is publicly hosted, you <ins>must</ins> provide a routed IPSEC tunnel or similar VPN solution, between the private LAN segment on which the IPGW4 card is to be located, and the Asterisk server.
+  - if the server is publicly hosted, you <ins>must</ins> provide a routed IPSEC tunnel or similar [VPN](https://github.com/birdwes/TDA30_Asterisk_h323/wiki/Setting-up-a-Linux-VPN) solution, between the private LAN segment on which the IPGW4 card is to be located, and the Asterisk server.
 - It is strongly suggested, that you should have at least one KX-T7636 proprietary digital telephone as an operator console, for small user programming changes and testing, e.g. switching between day/night service.  This will not affect the number of analogue extensions available.
 
 ### Capabilities (per KX-TDA30)
